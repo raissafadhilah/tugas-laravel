@@ -27,6 +27,15 @@
             <span>Chart</span></a>
     </li>
 
+    <hr class="sidebar-divider">
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ asset('/spp') }}">
+            <i class="fa-regular fa-note-sticky"></i>
+            <span>Data Spp</span></a>
+    </li>
+
+    <hr class="sidebar-divider">
+
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
