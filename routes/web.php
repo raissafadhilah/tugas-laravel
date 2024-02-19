@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SppModelController;
+use App\Http\Controllers\SppController;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\KelasesController;
+use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\PetugassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +30,8 @@ Route::get('/grafik', function () {
     return view('grafik');
 });
 
-Route::controller(SppModelController::class)->group(function () {
-    Route::get('/spp', 'index')->name('spp.index');
-    Route::get('/spp/create', 'create')->name('spp.create');
-    Route::post('/spp', 'store')->name('spp.store');
-    Route::get('/spp/edit/{id_spp}', 'edit')->name('spp.edit');
-    Route::put('/spp/{id_spp}', 'update')->name('spp.update');
-    Route::get('/spp/detail/{id_spp}', 'show')->name('spp.show');
-    Route::delete('/spp/{id}', 'destroy')->name('spp.destroy');
-});
+Route::resource('/spp', SppController::class);
+Route::resource('/petugas', PetugassController::class);
+Route::resource('/kelas', KelasesController::class);
+Route::resource('/siswa', SiswaController::class);
+Route::resource('/pembayaran', PembayaranController::class);

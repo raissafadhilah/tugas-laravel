@@ -28,12 +28,26 @@
     </li>
 
     <hr class="sidebar-divider">
+
     <li class="nav-item active">
         <a class="nav-link" href="{{ asset('/spp') }}">
             <i class="fa-regular fa-note-sticky"></i>
             <span>Data Spp</span></a>
     </li>
+    <hr class="sidebar-divider">
 
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ asset('/kelas') }}">
+            <i class="fa-solid fa-school"></i>
+            <span>Data Kelas</span></a>
+    </li>
+    <hr class="sidebar-divider">
+
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ asset('/petugas') }}">
+            <i class="fa-solid fa-user-large"></i>
+            <span>Data Petugas</span></a>
+    </li>
     <hr class="sidebar-divider">
 
     <!-- Sidebar Toggler (Sidebar) -->
